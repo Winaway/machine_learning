@@ -11809,7 +11809,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[1]:</div>
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># 引入这个项目需要的库</span>
@@ -11864,7 +11864,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># 显示数据集的一个描述</span>
@@ -11993,7 +11993,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># TODO：从数据集中选择三个你希望抽样的数据点的索引</span>
@@ -12122,12 +12122,12 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[18]:</div>
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># TODO：为DataFrame创建一个副本，用&#39;drop&#39;函数丢弃一些指定的特征</span>
-<span class="n">removed_feature</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;Milk&#39;</span><span class="p">]</span>
-<span class="n">new_data</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="s1">&#39;Milk&#39;</span><span class="p">,</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">removed_feature</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;Grocery&#39;</span><span class="p">]</span>
+<span class="n">new_data</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="s1">&#39;Grocery&#39;</span><span class="p">,</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
 
 
 <span class="c1"># TODO：使用给定的特征作为目标，将数据分割成训练集和测试集</span>
@@ -12156,7 +12156,7 @@ div#notebook {
 <div class="prompt"></div>
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>The score on test dataset is  0.429749433045
+<pre>The score on test dataset is  0.698205852782
 </pre>
 </div>
 </div>
@@ -12181,12 +12181,7 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>回答:</strong> Grocery 0.698205852782
-Fresh -0.2091348193
-Delicatessen(熟食） -1.32764023447
-Frozen -0.570175108151
-Detergents_Paper 0.558227265767
-Milk 0.429749433045</p>
+<p><strong>回答:</strong> 我尝试预测Grocery的决定系数，Grocery的得分是 0.698205852782。根据决定系数的定义，可以推出Grocery可以较好的被其他特征拟合，因此特征对区分用户的消费习惯来说不是那么必要。</p>
 
 </div>
 </div>
@@ -12203,7 +12198,7 @@ Milk 0.429749433045</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[19]:</div>
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># 对于数据中的每一对特征构造一个散布矩阵</span>
@@ -13734,7 +13729,7 @@ SUVORK5CYII=
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[20]:</div>
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># TODO：使用自然对数缩放数据</span>
@@ -17184,7 +17179,7 @@ H41Go9FoNBqNRrMq+P8BgiKWD2uC/EAAAAAASUVORK5CYII=
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[21]:</div>
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># 展示经过对数变换后的样本数据</span>
@@ -17277,7 +17272,7 @@ H41Go9FoNBqNRrMq+P8BgiKWD2uC/EAAAAAASUVORK5CYII=
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[24]:</div>
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># 对于每一个特征，找到值异常高或者是异常低的数据点</span>
@@ -18004,7 +17999,7 @@ H41Go9FoNBqNRrMq+P8BgiKWD2uC/EAAAAAASUVORK5CYII=
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[25]:</div>
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># TODO：通过在good data上使用PCA，将其转换成和当前特征数一样多的维度</span>
@@ -18377,7 +18372,7 @@ GTUAAAAASUVORK5CYII=
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[26]:</div>
+<div class="prompt input_prompt">In&nbsp;[11]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># 展示经过PCA转换的sample log-data</span>
@@ -18467,7 +18462,7 @@ GTUAAAAASUVORK5CYII=
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[27]:</div>
+<div class="prompt input_prompt">In&nbsp;[12]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># TODO：通过在good data上进行PCA，将其转换成两个维度</span>
@@ -18501,7 +18496,7 @@ GTUAAAAASUVORK5CYII=
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[28]:</div>
+<div class="prompt input_prompt">In&nbsp;[13]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># 展示经过两个维度的PCA转换之后的样本log-data</span>
@@ -18570,7 +18565,7 @@ GTUAAAAASUVORK5CYII=
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[29]:</div>
+<div class="prompt input_prompt">In&nbsp;[14]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Create a biplot</span>
@@ -18586,12 +18581,12 @@ GTUAAAAASUVORK5CYII=
 
 
 <div class="output_area">
-<div class="prompt output_prompt">Out[29]:</div>
+<div class="prompt output_prompt">Out[14]:</div>
 
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0x117a63910&gt;</pre>
+<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0x11465dd90&gt;</pre>
 </div>
 
 </div>
@@ -19735,7 +19730,7 @@ M7nuSgAAAABJRU5ErkJggg==
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[38]:</div>
+<div class="prompt input_prompt">In&nbsp;[15]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># TODO：在降维后的数据上使用你选择的聚类算法</span>
@@ -19812,7 +19807,7 @@ M7nuSgAAAABJRU5ErkJggg==
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[39]:</div>
+<div class="prompt input_prompt">In&nbsp;[16]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># 从已有的实现中展示聚类的结果</span>
@@ -20490,7 +20485,7 @@ AG2HQAgAAABA2yEQAgAAANB2CIQAAAAAtB0CIQAAAABth0AIAAAAQNshEAIAAADQdv5/XXOdJMX6
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[40]:</div>
+<div class="prompt input_prompt">In&nbsp;[17]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># TODO：反向转换中心点</span>
@@ -20596,7 +20591,7 @@ AG2HQAgAAABA2yEQAgAAANB2CIQAAAAAtB0CIQAAAABth0AIAAAAQNshEAIAAADQdv5/XXOdJMX6
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[41]:</div>
+<div class="prompt input_prompt">In&nbsp;[18]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># 显示预测结果</span>
@@ -20681,7 +20676,7 @@ Sample point 2 predicted to be in Cluster 0
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[42]:</div>
+<div class="prompt input_prompt">In&nbsp;[19]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.ensemble</span> <span class="kn">import</span> <span class="n">RandomForestClassifier</span>
@@ -20753,7 +20748,7 @@ Sample point 2 predicted to be in Cluster 0
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[43]:</div>
+<div class="prompt input_prompt">In&nbsp;[20]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># 根据‘Channel‘数据显示聚类的结果</span>
