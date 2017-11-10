@@ -34,7 +34,7 @@ class LearningAgent(Agent):
 
         # Select the destination as the new location to route to
         self.planner.route_to(destination)
-        a = 0.95
+        a = 0.993
         ###########
         ## TO DO ##
         ###########
@@ -62,12 +62,18 @@ class LearningAgent(Agent):
         waypoint = self.planner.next_waypoint() # The next waypoint
         inputs = self.env.sense(self)           # Visual input - intersection light and traffic
         deadline = self.env.get_deadline(self)  # Remaining deadline
-
+        # if inputs["right"] != 'forward':
+        #     inputs['right'] = 'other_heading'
+        if inputs["left"] != 'forward':
+            inputs['left'] = 'other_heading'
+        # if inputs['oncoming'] != 'left':
+        #     inputs['oncoming'] = 'other_heading'
         ###########
         ## TO DO ##
         ###########
         # Set 'state' as a tuple of relevant data for the agent
-        state = (waypoint,inputs["light"],inputs["oncoming"])
+        state = (waypoint,inputs["light"],inputs["oncoming"],inputs["left"])
+        #state = (waypoint,inputs["light"],inputs["oncoming"])
 
         return state
 
@@ -125,10 +131,12 @@ class LearningAgent(Agent):
             action = random.choice(self.valid_actions)
         else:
             actions = [None,None]
+            maxQ_actions = []
             actions[0] = random.choice(self.valid_actions)
             for key in self.Q[state]:
                 if self.Q[state][key]==self.get_maxQ(state):
-                    actions[1] = key
+                    maxQ_actions.append(key) #consider that there may have more than one maxQ_action
+            actions[1] = random.choice(maxQ_actions)
             action = np.random.choice(actions,1,p=[self.epsilon,1-self.epsilon])[0]
 
         return action
@@ -197,7 +205,7 @@ def run():
     #   update_delay - continuous time (in seconds) between actions, default is 2.0 seconds
     #   display      - set to False to disable the GUI if PyGame is enabled
     #   log_metrics  - set to True to log trial and simulation results to /logs
-    #   optimized    - set to True to change the default log file name
+    #   optimized    - set to True to change the default log file name,optimized=True
     sim = Simulator(env,update_delay=0.01,display=True,log_metrics=True,optimized=True)
 
     ##############
@@ -205,8 +213,8 @@ def run():
     # Flags:
     #   tolerance  - epsilon tolerance before beginning testing, default is 0.05
     #   n_test     - discrete number of testing trials to perform, default is 0
-    #tolerance=0.0001
-    sim.run(tolerance=0.0001,n_test=10)
+    #tolerance=0.0005
+    sim.run(tolerance=0.0005,n_test=20)
 
 
 if __name__ == '__main__':
