@@ -34,14 +34,14 @@ class LearningAgent(Agent):
 
         # Select the destination as the new location to route to
         self.planner.route_to(destination)
-        a = 0.993
+        a = 0.99
         ###########
         ## TO DO ##
         ###########
         # Update epsilon using a decay function of your choice
         # Update additional class parameters as needed
         # If 'testing' is True, set epsilon and alpha to 0
-        #self.epsilon = self.epsilon-0.05
+        # self.epsilon = self.epsilon-0.05
 
         #self.epsilon = 1/(self.t**2)
         self.epsilon = a**self.t
@@ -64,15 +64,15 @@ class LearningAgent(Agent):
         deadline = self.env.get_deadline(self)  # Remaining deadline
         # if inputs["right"] != 'forward':
         #     inputs['right'] = 'other_heading'
-        if inputs["left"] != 'forward':
-            inputs['left'] = 'other_heading'
+        # if inputs["left"] != 'forward':
+        #     inputs['left'] = 'other_heading'
         # if inputs['oncoming'] != 'left':
         #     inputs['oncoming'] = 'other_heading'
         ###########
         ## TO DO ##
         ###########
         # Set 'state' as a tuple of relevant data for the agent
-        state = (waypoint,inputs["light"],inputs["oncoming"],inputs["left"])
+        state = (waypoint,inputs["light"],inputs["oncoming"],inputs["left"],inputs["right"])
         #state = (waypoint,inputs["light"],inputs["oncoming"])
 
         return state
@@ -214,7 +214,7 @@ def run():
     #   tolerance  - epsilon tolerance before beginning testing, default is 0.05
     #   n_test     - discrete number of testing trials to perform, default is 0
     #tolerance=0.0005
-    sim.run(tolerance=0.0005,n_test=20)
+    sim.run(tolerance=0.002,n_test=10)
 
 
 if __name__ == '__main__':
